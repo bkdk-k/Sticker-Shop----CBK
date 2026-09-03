@@ -8,7 +8,6 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Fredoka:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
 
 <style>
@@ -35,14 +34,9 @@ html {
 body {
     margin: 0;
     font-family: "Baloo 2", cursive;
-    background:
-        radial-gradient(circle at 10% 10%, #fff6fa 0 8%, transparent 9%),
-        radial-gradient(circle at 90% 20%, #fff8cf 0 7%, transparent 8%),
-        var(--light-pink);
+    background: var(--light-pink);
     color: var(--text);
 }
-
-/* HEADER */
 
 header {
     background: var(--white);
@@ -71,14 +65,7 @@ header {
     font-weight: 700;
     color: var(--deep-pink);
     cursor: pointer;
-    transition: .2s;
 }
-
-.cart-button:hover {
-    transform: scale(1.05);
-}
-
-/* NAV */
 
 nav {
     background: #fff9fc;
@@ -107,13 +94,10 @@ nav button.active {
     color: white;
 }
 
-/* HERO */
-
 .hero {
     text-align: center;
     padding: 65px 20px;
-    background:
-        linear-gradient(135deg, #fffdfd, #fff1f7, #fffbe2);
+    background: linear-gradient(135deg, #fffdfd, #fff1f7, #fffbe2);
 }
 
 .hero h1 {
@@ -139,8 +123,6 @@ nav button.active {
     font-weight: 800;
     font-family: "Fredoka", sans-serif;
 }
-
-/* GENERAL SECTIONS */
 
 section {
     padding: 55px 6%;
@@ -244,25 +226,6 @@ section {
     font-size: 14px;
 }
 
-.pack button,
-.product button,
-.custom-button {
-    border: 0;
-    background: var(--hot-pink);
-    color: white;
-    border-radius: 18px;
-    padding: 9px 16px;
-    font-family: "Fredoka", sans-serif;
-    font-weight: 700;
-    cursor: pointer;
-}
-
-.pack button:hover,
-.product button:hover,
-.custom-button:hover {
-    background: var(--deep-pink);
-}
-
 /* PRODUCTS */
 
 .products-section {
@@ -312,11 +275,29 @@ section {
     margin: 5px 0 10px;
 }
 
-/* KPOP / GPOP */
+.product button,
+.pack button,
+.member-card button {
+    border: 0;
+    background: var(--hot-pink);
+    color: white;
+    border-radius: 18px;
+    padding: 9px 16px;
+    font-family: "Fredoka", sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.product button:hover,
+.pack button:hover,
+.member-card button:hover {
+    background: var(--deep-pink);
+}
+
+/* MUSIC */
 
 .music-section {
-    background:
-        linear-gradient(135deg, #fff0f7, #fffbe0);
+    background: linear-gradient(135deg, #fff0f7, #fffbe0);
 }
 
 .music-grid {
@@ -331,7 +312,7 @@ section {
     background: white;
     border: 3px solid var(--pink);
     border-radius: 25px;
-    min-height: 150px;
+    min-height: 160px;
     padding: 30px 15px;
     display: flex;
     flex-direction: column;
@@ -340,6 +321,7 @@ section {
     text-align: center;
     box-shadow: 0 5px 0 #ffd3e3;
     transition: .2s;
+    cursor: pointer;
 }
 
 .music-card:hover {
@@ -351,7 +333,6 @@ section {
     font-size: 32px;
     font-weight: 700;
     color: var(--deep-pink);
-    letter-spacing: 1px;
 }
 
 .music-type {
@@ -360,23 +341,76 @@ section {
     font-size: 14px;
 }
 
-.music-price {
-    margin-top: 10px;
-    font-size: 19px;
-    color: var(--hot-pink);
-    font-weight: 800;
-}
-
-.music-card button {
-    margin-top: 10px;
-    border: 0;
+.music-card .click-text {
+    margin-top: 12px;
     background: var(--yellow);
     color: var(--deep-pink);
+    padding: 7px 15px;
     border-radius: 18px;
-    padding: 8px 15px;
+    font-weight: 700;
+}
+
+/* MEMBER VIEW */
+
+#memberView {
+    display: none;
+    background: #fff9fc;
+    min-height: 500px;
+}
+
+.member-view-header {
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+
+.back-button {
+    border: 3px solid var(--pink);
+    background: white;
+    color: var(--deep-pink);
+    border-radius: 22px;
+    padding: 9px 18px;
     font-family: "Fredoka", sans-serif;
     font-weight: 700;
     cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.back-button:hover {
+    background: var(--pink);
+    color: white;
+}
+
+.member-grid {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.member-card {
+    background: white;
+    border: 3px solid var(--pink);
+    border-radius: 24px;
+    padding: 25px 15px;
+    text-align: center;
+    box-shadow: 0 5px 0 #ffd3e3;
+}
+
+.member-name {
+    font-family: "Fredoka", sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--deep-pink);
+    margin-bottom: 8px;
+}
+
+.member-card .member-price {
+    color: var(--hot-pink);
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 10px;
 }
 
 /* CART */
@@ -476,8 +510,6 @@ section {
     cursor: pointer;
 }
 
-/* OVERLAY */
-
 .overlay {
     display: none;
     position: fixed;
@@ -490,7 +522,7 @@ section {
     display: block;
 }
 
-/* CHECKOUT MODAL */
+/* CHECKOUT */
 
 .modal {
     display: none;
@@ -544,11 +576,6 @@ section {
     outline: none;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
-    border-color: var(--hot-pink);
-}
-
 .form-group textarea {
     resize: vertical;
     min-height: 80px;
@@ -566,10 +593,6 @@ section {
     justify-content: space-between;
     gap: 10px;
     padding: 5px 0;
-}
-
-.summary-pack {
-    color: var(--deep-pink);
 }
 
 .modal-buttons {
@@ -611,8 +634,6 @@ section {
     font-size: 60px;
 }
 
-/* FOOTER */
-
 footer {
     text-align: center;
     background: var(--deep-pink);
@@ -623,8 +644,6 @@ footer {
 footer p {
     margin: 5px;
 }
-
-/* MOBILE */
 
 @media (max-width: 600px) {
 
@@ -655,8 +674,6 @@ footer p {
 
 <body>
 
-<!-- HEADER -->
-
 <header>
 
     <div class="logo">
@@ -669,8 +686,6 @@ footer p {
 
 </header>
 
-
-<!-- NAVIGATION -->
 
 <nav>
 
@@ -713,8 +728,6 @@ footer p {
 </nav>
 
 
-<!-- HERO -->
-
 <section class="hero">
 
     <h1>CBK'S SHOP 🎀</h1>
@@ -730,8 +743,6 @@ footer p {
 
 </section>
 
-
-<!-- QUICK GUIDE -->
 
 <section class="guide">
 
@@ -758,17 +769,17 @@ footer p {
             <span>🎀</span>
             <h3>Sticker Packs</h3>
             <p>
-                Every sticker pack contains
-                <b>11 stickers</b> and costs only <b>₱20</b>!
+                Every pack contains <b>11 stickers</b>
+                and costs only <b>₱20</b>!
             </p>
         </div>
 
         <div class="guide-card">
-            <span>🛒</span>
-            <h3>Add to Cart</h3>
+            <span>🎤</span>
+            <h3>Music Stickers</h3>
             <p>
-                Mix individual stickers and packs
-                in the same cart.
+                Choose your favorite group,
+                then pick the members you want!
             </p>
         </div>
 
@@ -776,8 +787,8 @@ footer p {
             <span>💌</span>
             <h3>Checkout</h3>
             <p>
-                Fill out your details and send your
-                order straight to the shop email.
+                Fill out your details and send
+                your order to the shop email.
             </p>
         </div>
 
@@ -788,7 +799,7 @@ footer p {
 
 <!-- PACKS -->
 
-<section class="packs-section" id="packs">
+<section class="packs-section">
 
     <h2 class="section-title">
         🎀 STICKER PACKS 🎀
@@ -822,7 +833,7 @@ footer p {
 </section>
 
 
-<!-- KPOP / GPOP -->
+<!-- GROUP SELECTION -->
 
 <section class="music-section" id="music">
 
@@ -831,12 +842,37 @@ footer p {
     </h2>
 
     <p class="section-subtitle">
-        Your favorite groups — as cute text stickers! 💗
+        Choose a group to see their members!
         <br>
-        <b>No pictures, just the group names.</b>
+        <b>Names only • ₱2 per member sticker</b>
     </p>
 
     <div class="music-grid" id="musicGrid"></div>
+
+</section>
+
+
+<!-- MEMBER SELECTION -->
+
+<section id="memberView">
+
+    <div class="member-view-header">
+
+        <button class="back-button" onclick="backToGroups()">
+            ← Back to Groups
+        </button>
+
+        <h2 class="section-title" id="memberTitle">
+            Members
+        </h2>
+
+        <p class="section-subtitle" id="memberSubtitle">
+            Pick the members you want!
+        </p>
+
+    </div>
+
+    <div class="member-grid" id="memberGrid"></div>
 
 </section>
 
@@ -884,7 +920,7 @@ footer p {
 </aside>
 
 
-<!-- CHECKOUT MODAL -->
+<!-- CHECKOUT -->
 
 <div class="modal" id="checkoutModal">
 
@@ -911,7 +947,6 @@ footer p {
 
             </div>
 
-
             <div class="form-group">
 
                 <label for="customName">
@@ -926,7 +961,6 @@ footer p {
 
             </div>
 
-
             <div class="form-group">
 
                 <label for="customSticker">
@@ -940,7 +974,6 @@ footer p {
                 >
 
             </div>
-
 
             <div class="form-group">
 
@@ -957,7 +990,6 @@ footer p {
 
             </div>
 
-
             <div class="form-group">
 
                 <label for="notes">
@@ -971,7 +1003,6 @@ footer p {
 
             </div>
 
-
             <div class="summary">
 
                 <h3 style="margin-top:0;">
@@ -983,7 +1014,6 @@ footer p {
                 </div>
 
             </div>
-
 
             <div class="modal-buttons">
 
@@ -1038,13 +1068,9 @@ footer p {
 </div>
 
 
-<!-- FOOTER -->
-
 <footer>
 
-    <p>
-        🎀 CBK'S SHOP 🎀
-    </p>
+    <p>🎀 CBK'S SHOP 🎀</p>
 
     <p>
         Cute stickers made with love 💗
@@ -1060,7 +1086,7 @@ footer p {
 <script>
 
 /* =========================================================
-   PRODUCT DATA
+   INDIVIDUAL STICKERS
 ========================================================= */
 
 const products = [
@@ -1164,7 +1190,7 @@ const products = [
 
 
 /* =========================================================
-   STICKER PACK DATA
+   PACKS
 ========================================================= */
 
 const packs = [
@@ -1189,16 +1215,75 @@ const packs = [
 
 
 /* =========================================================
-   KPOP / GPOP DATA
+   KPOP / GPOP GROUPS + MEMBERS
 ========================================================= */
 
 const musicGroups = [
 
-    ["aespa", "K-Pop"],
-    ["ILLIT", "K-Pop"],
-    ["KATSEYE", "G-Pop"],
-    ["IVE", "K-Pop"],
-    ["TWICE", "K-Pop"]
+    {
+        name: "aespa",
+        type: "K-Pop",
+        members: [
+            "Karina",
+            "Giselle",
+            "Winter",
+            "Ningning"
+        ]
+    },
+
+    {
+        name: "ILLIT",
+        type: "K-Pop",
+        members: [
+            "Yunah",
+            "Minju",
+            "Moka",
+            "Wonhee",
+            "Iroha"
+        ]
+    },
+
+    {
+        name: "KATSEYE",
+        type: "G-Pop",
+        members: [
+            "Daniela",
+            "Lara",
+            "Manon",
+            "Megan",
+            "Sophia",
+            "Yoonchae"
+        ]
+    },
+
+    {
+        name: "IVE",
+        type: "K-Pop",
+        members: [
+            "Gaeul",
+            "Yujin",
+            "Rei",
+            "Wonyoung",
+            "Liz",
+            "Leeseo"
+        ]
+    },
+
+    {
+        name: "TWICE",
+        type: "K-Pop",
+        members: [
+            "Nayeon",
+            "Jeongyeon",
+            "Momo",
+            "Sana",
+            "Jihyo",
+            "Mina",
+            "Dahyun",
+            "Chaeyoung",
+            "Tzuyu"
+        ]
+    }
 
 ];
 
@@ -1216,7 +1301,8 @@ let cart = {};
 
 function renderPacks() {
 
-    const container = document.getElementById("packGrid");
+    const container =
+        document.getElementById("packGrid");
 
     container.innerHTML = "";
 
@@ -1261,13 +1347,17 @@ function renderPacks() {
 
 function renderProducts(category = "All") {
 
-    const container = document.getElementById("productGrid");
+    const container =
+        document.getElementById("productGrid");
 
     container.innerHTML = "";
 
     products.forEach((product, index) => {
 
-        if (category !== "All" && product[2] !== category) {
+        if (
+            category !== "All" &&
+            product[2] !== category
+        ) {
             return;
         }
 
@@ -1305,12 +1395,13 @@ function renderProducts(category = "All") {
 
 
 /* =========================================================
-   RENDER MUSIC
+   RENDER GROUPS
 ========================================================= */
 
 function renderMusic() {
 
-    const container = document.getElementById("musicGrid");
+    const container =
+        document.getElementById("musicGrid");
 
     container.innerHTML = "";
 
@@ -1318,23 +1409,22 @@ function renderMusic() {
 
         container.innerHTML += `
 
-            <div class="music-card">
+            <div
+                class="music-card"
+                onclick="openGroup(${index})"
+            >
 
                 <div class="music-name">
-                    ${group[0]}
+                    ${group.name}
                 </div>
 
                 <div class="music-type">
-                    ${group[1]} • Text Sticker
+                    ${group.type} • Text Stickers
                 </div>
 
-                <div class="music-price">
-                    ₱2
+                <div class="click-text">
+                    ✨ View Members
                 </div>
-
-                <button onclick="addMusicToCart(${index}, this)">
-                    + Add Sticker
-                </button>
 
             </div>
 
@@ -1346,12 +1436,91 @@ function renderMusic() {
 
 
 /* =========================================================
+   OPEN GROUP
+========================================================= */
+
+function openGroup(groupIndex) {
+
+    const group =
+        musicGroups[groupIndex];
+
+    document.getElementById("music").style.display = "none";
+
+    document.getElementById("memberView").style.display = "block";
+
+    document.getElementById("memberTitle").innerText =
+        `🎤 ${group.name} Members`;
+
+    document.getElementById("memberSubtitle").innerHTML =
+        `Pick the members you want! • <b>₱2 per member sticker</b>`;
+
+    const container =
+        document.getElementById("memberGrid");
+
+    container.innerHTML = "";
+
+    group.members.forEach((member, memberIndex) => {
+
+        container.innerHTML += `
+
+            <div class="member-card">
+
+                <div class="member-name">
+                    ${member}
+                </div>
+
+                <div class="member-price">
+                    ₱2
+                </div>
+
+                <button
+                    onclick="addMemberToCart(${groupIndex}, ${memberIndex}, this)"
+                >
+                    + Add Sticker
+                </button>
+
+            </div>
+
+        `;
+
+    });
+
+    document
+        .getElementById("memberView")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+
+}
+
+
+/* =========================================================
+   BACK TO GROUPS
+========================================================= */
+
+function backToGroups() {
+
+    document.getElementById("memberView").style.display = "none";
+
+    document.getElementById("music").style.display = "block";
+
+    document
+        .getElementById("music")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+
+}
+
+
+/* =========================================================
    ADD INDIVIDUAL STICKER
 ========================================================= */
 
 function addToCart(index, button) {
 
-    const key = "sticker-" + index;
+    const key =
+        "sticker-" + index;
 
     if (!cart[key]) {
         cart[key] = 0;
@@ -1361,13 +1530,16 @@ function addToCart(index, button) {
 
     updateCart();
 
-    const oldText = button.innerText;
+    const oldText =
+        button.innerText;
 
-    button.innerText = "✓ Added!";
+    button.innerText =
+        "✓ Added!";
 
     setTimeout(() => {
 
-        button.innerText = oldText;
+        button.innerText =
+            oldText;
 
     }, 700);
 
@@ -1380,7 +1552,8 @@ function addToCart(index, button) {
 
 function addPackToCart(index, button) {
 
-    const key = "pack-" + index;
+    const key =
+        "pack-" + index;
 
     if (!cart[key]) {
         cart[key] = 0;
@@ -1390,13 +1563,16 @@ function addPackToCart(index, button) {
 
     updateCart();
 
-    const oldText = button.innerText;
+    const oldText =
+        button.innerText;
 
-    button.innerText = "✓ Added!";
+    button.innerText =
+        "✓ Added!";
 
     setTimeout(() => {
 
-        button.innerText = oldText;
+        button.innerText =
+            oldText;
 
     }, 700);
 
@@ -1404,12 +1580,20 @@ function addPackToCart(index, button) {
 
 
 /* =========================================================
-   ADD KPOP / GPOP STICKER
+   ADD MEMBER
 ========================================================= */
 
-function addMusicToCart(index, button) {
+function addMemberToCart(
+    groupIndex,
+    memberIndex,
+    button
+) {
 
-    const key = "music-" + index;
+    const key =
+        "member-" +
+        groupIndex +
+        "-" +
+        memberIndex;
 
     if (!cart[key]) {
         cart[key] = 0;
@@ -1419,13 +1603,16 @@ function addMusicToCart(index, button) {
 
     updateCart();
 
-    const oldText = button.innerText;
+    const oldText =
+        button.innerText;
 
-    button.innerText = "✓ Added!";
+    button.innerText =
+        "✓ Added!";
 
     setTimeout(() => {
 
-        button.innerText = oldText;
+        button.innerText =
+            oldText;
 
     }, 700);
 
@@ -1459,19 +1646,22 @@ function changeQuantity(key, amount) {
 
 function updateCart() {
 
-    const container = document.getElementById("cartItems");
+    const container =
+        document.getElementById("cartItems");
 
-    const countElement = document.getElementById("cartCount");
+    const countElement =
+        document.getElementById("cartCount");
 
-    const totalElement = document.getElementById("cartTotal");
+    const totalElement =
+        document.getElementById("cartTotal");
 
     container.innerHTML = "";
 
     let total = 0;
-
     let itemCount = 0;
 
-    const keys = Object.keys(cart);
+    const keys =
+        Object.keys(cart);
 
     if (keys.length === 0) {
 
@@ -1482,32 +1672,34 @@ function updateCart() {
         `;
 
         countElement.innerText = "0";
-
         totalElement.innerText = "0";
 
         return;
-
     }
 
 
     keys.forEach(key => {
 
-        const quantity = cart[key];
+        const quantity =
+            cart[key];
 
         itemCount += quantity;
 
 
-        /* INDIVIDUAL STICKER */
+        /* NORMAL STICKER */
 
         if (key.startsWith("sticker-")) {
 
-            const index = Number(
-                key.replace("sticker-", "")
-            );
+            const index =
+                Number(
+                    key.replace("sticker-", "")
+                );
 
-            const product = products[index];
+            const product =
+                products[index];
 
-            const price = quantity * 2;
+            const price =
+                quantity * 2;
 
             total += price;
 
@@ -1554,13 +1746,16 @@ function updateCart() {
 
         else if (key.startsWith("pack-")) {
 
-            const index = Number(
-                key.replace("pack-", "")
-            );
+            const index =
+                Number(
+                    key.replace("pack-", "")
+                );
 
-            const pack = packs[index];
+            const pack =
+                packs[index];
 
-            const price = quantity * 20;
+            const price =
+                quantity * 20;
 
             total += price;
 
@@ -1607,17 +1802,27 @@ function updateCart() {
         }
 
 
-        /* KPOP / GPOP */
+        /* MEMBER STICKER */
 
-        else if (key.startsWith("music-")) {
+        else if (key.startsWith("member-")) {
 
-            const index = Number(
-                key.replace("music-", "")
-            );
+            const parts =
+                key.split("-");
 
-            const group = musicGroups[index];
+            const groupIndex =
+                Number(parts[1]);
 
-            const price = quantity * 2;
+            const memberIndex =
+                Number(parts[2]);
+
+            const group =
+                musicGroups[groupIndex];
+
+            const member =
+                group.members[memberIndex];
+
+            const price =
+                quantity * 2;
 
             total += price;
 
@@ -1626,7 +1831,7 @@ function updateCart() {
                 <div class="cart-item">
 
                     <div class="cart-item-name">
-                        🎤 ${group[0]} Text Sticker
+                        🎤 ${group.name} — ${member}
                     </div>
 
                     <div class="cart-item-price">
@@ -1662,9 +1867,11 @@ function updateCart() {
     });
 
 
-    countElement.innerText = itemCount;
+    countElement.innerText =
+        itemCount;
 
-    totalElement.innerText = total;
+    totalElement.innerText =
+        total;
 
 }
 
@@ -1700,14 +1907,16 @@ function closeCart() {
 
 
 /* =========================================================
-   PRODUCT FILTER
+   FILTER
 ========================================================= */
 
 function filterProducts(category, button) {
 
     document
         .querySelectorAll("nav button")
-        .forEach(btn => btn.classList.remove("active"));
+        .forEach(btn =>
+            btn.classList.remove("active")
+        );
 
     button.classList.add("active");
 
@@ -1717,7 +1926,7 @@ function filterProducts(category, button) {
 
 
 /* =========================================================
-   SCROLL TO KPOP
+   SCROLL TO MUSIC
 ========================================================= */
 
 function scrollToMusic() {
@@ -1737,12 +1946,15 @@ function scrollToMusic() {
 
 function checkout() {
 
-    if (Object.keys(cart).length === 0) {
+    if (
+        Object.keys(cart).length === 0
+    ) {
 
-        alert("Your cart is empty! 🎀");
+        alert(
+            "Your cart is empty! 🎀"
+        );
 
         return;
-
     }
 
     closeCart();
@@ -1763,7 +1975,9 @@ function checkout() {
 function updateCheckoutSummary() {
 
     const summaryElement =
-        document.getElementById("orderSummary");
+        document.getElementById(
+            "orderSummary"
+        );
 
     let summary = "";
 
@@ -1772,20 +1986,27 @@ function updateCheckoutSummary() {
 
     Object.keys(cart).forEach(key => {
 
-        const quantity = cart[key];
+        const quantity =
+            cart[key];
 
 
-        /* STICKER */
+        /* NORMAL */
 
         if (key.startsWith("sticker-")) {
 
-            const index = Number(
-                key.replace("sticker-", "")
-            );
+            const index =
+                Number(
+                    key.replace(
+                        "sticker-",
+                        ""
+                    )
+                );
 
-            const product = products[index];
+            const product =
+                products[index];
 
-            const price = quantity * 2;
+            const price =
+                quantity * 2;
 
             total += price;
 
@@ -1794,7 +2015,9 @@ function updateCheckoutSummary() {
                 <div class="summary-line">
 
                     <span>
-                        ${product[1]} ${product[0]} × ${quantity}
+                        ${product[1]}
+                        ${product[0]}
+                        × ${quantity}
                     </span>
 
                     <b>
@@ -1812,23 +2035,33 @@ function updateCheckoutSummary() {
 
         else if (key.startsWith("pack-")) {
 
-            const index = Number(
-                key.replace("pack-", "")
-            );
+            const index =
+                Number(
+                    key.replace(
+                        "pack-",
+                        ""
+                    )
+                );
 
-            const pack = packs[index];
+            const pack =
+                packs[index];
 
-            const price = quantity * 20;
+            const price =
+                quantity * 20;
 
             total += price;
 
             summary += `
 
-                <div class="summary-line summary-pack">
+                <div class="summary-line">
 
                     <span>
-                        ${pack[1]} ${pack[0]} × ${quantity}
-                        <small>(11 stickers each)</small>
+                        ${pack[1]}
+                        ${pack[0]}
+                        × ${quantity}
+                        <small>
+                            (11 stickers each)
+                        </small>
                     </span>
 
                     <b>
@@ -1842,17 +2075,27 @@ function updateCheckoutSummary() {
         }
 
 
-        /* MUSIC */
+        /* MEMBER */
 
-        else if (key.startsWith("music-")) {
+        else if (key.startsWith("member-")) {
 
-            const index = Number(
-                key.replace("music-", "")
-            );
+            const parts =
+                key.split("-");
 
-            const group = musicGroups[index];
+            const groupIndex =
+                Number(parts[1]);
 
-            const price = quantity * 2;
+            const memberIndex =
+                Number(parts[2]);
+
+            const group =
+                musicGroups[groupIndex];
+
+            const member =
+                group.members[memberIndex];
+
+            const price =
+                quantity * 2;
 
             total += price;
 
@@ -1861,7 +2104,9 @@ function updateCheckoutSummary() {
                 <div class="summary-line">
 
                     <span>
-                        🎤 ${group[0]} Text Sticker × ${quantity}
+                        🎤 ${group.name}
+                        — ${member}
+                        × ${quantity}
                     </span>
 
                     <b>
@@ -1896,7 +2141,8 @@ function updateCheckoutSummary() {
     `;
 
 
-    summaryElement.innerHTML = summary;
+    summaryElement.innerHTML =
+        summary;
 
 }
 
@@ -1908,15 +2154,21 @@ function updateCheckoutSummary() {
 function closeCheckout() {
 
     document
-        .getElementById("checkoutModal")
+        .getElementById(
+            "checkoutModal"
+        )
         .classList.remove("show");
 
     document
-        .getElementById("successMessage")
+        .getElementById(
+            "successMessage"
+        )
         .classList.remove("show");
 
     document
-        .getElementById("checkoutContent")
+        .getElementById(
+            "checkoutContent"
+        )
         .style.display = "block";
 
 }
@@ -1930,21 +2182,27 @@ async function placeOrder() {
 
     const name =
         document
-            .getElementById("customerName")
+            .getElementById(
+                "customerName"
+            )
             .value
             .trim();
 
 
     const customName =
         document
-            .getElementById("customName")
+            .getElementById(
+                "customName"
+            )
             .value
             .trim();
 
 
     const customSticker =
         document
-            .getElementById("customSticker")
+            .getElementById(
+                "customSticker"
+            )
             .value
             .trim();
 
@@ -1952,30 +2210,27 @@ async function placeOrder() {
     const customStickerQty =
         Number(
             document
-                .getElementById("customStickerQty")
+                .getElementById(
+                    "customStickerQty"
+                )
                 .value
         ) || 0;
 
 
     const notes =
         document
-            .getElementById("notes")
+            .getElementById(
+                "notes"
+            )
             .value
             .trim();
 
 
     if (!name) {
 
-        alert("Please enter your name! 💗");
-
-        return;
-
-    }
-
-
-    if (customStickerQty < 0) {
-
-        alert("Please enter a valid custom sticker quantity.");
+        alert(
+            "Please enter your name! 💗"
+        );
 
         return;
 
@@ -1987,24 +2242,29 @@ async function placeOrder() {
     let total = 0;
 
 
-    /* CART ITEMS */
-
     Object.keys(cart).forEach(key => {
 
-        const quantity = cart[key];
+        const quantity =
+            cart[key];
 
 
-        /* INDIVIDUAL */
+        /* NORMAL STICKER */
 
         if (key.startsWith("sticker-")) {
 
-            const index = Number(
-                key.replace("sticker-", "")
-            );
+            const index =
+                Number(
+                    key.replace(
+                        "sticker-",
+                        ""
+                    )
+                );
 
-            const product = products[index];
+            const product =
+                products[index];
 
-            const price = quantity * 2;
+            const price =
+                quantity * 2;
 
             total += price;
 
@@ -2019,13 +2279,19 @@ async function placeOrder() {
 
         else if (key.startsWith("pack-")) {
 
-            const index = Number(
-                key.replace("pack-", "")
-            );
+            const index =
+                Number(
+                    key.replace(
+                        "pack-",
+                        ""
+                    )
+                );
 
-            const pack = packs[index];
+            const pack =
+                packs[index];
 
-            const price = quantity * 20;
+            const price =
+                quantity * 20;
 
             total += price;
 
@@ -2036,22 +2302,32 @@ async function placeOrder() {
         }
 
 
-        /* MUSIC */
+        /* MEMBER */
 
-        else if (key.startsWith("music-")) {
+        else if (key.startsWith("member-")) {
 
-            const index = Number(
-                key.replace("music-", "")
-            );
+            const parts =
+                key.split("-");
 
-            const group = musicGroups[index];
+            const groupIndex =
+                Number(parts[1]);
 
-            const price = quantity * 2;
+            const memberIndex =
+                Number(parts[2]);
+
+            const group =
+                musicGroups[groupIndex];
+
+            const member =
+                group.members[memberIndex];
+
+            const price =
+                quantity * 2;
 
             total += price;
 
             orderLines.push(
-                `${group[0]} Text Sticker × ${quantity} = ₱${price}`
+                `${group.name} — ${member} × ${quantity} = ₱${price}`
             );
 
         }
@@ -2061,7 +2337,10 @@ async function placeOrder() {
 
     /* CUSTOM STICKER */
 
-    if (customSticker && customStickerQty > 0) {
+    if (
+        customSticker &&
+        customStickerQty > 0
+    ) {
 
         const customPrice =
             customStickerQty * 2;
@@ -2106,8 +2385,6 @@ async function placeOrder() {
     const formData =
         new FormData();
 
-
-    /* YOUR WEB3FORMS ACCESS KEY */
 
     formData.append(
         "access_key",
@@ -2169,12 +2446,6 @@ async function placeOrder() {
     );
 
 
-    formData.append(
-        "replyto",
-        "noreply@cbkshop.com"
-    );
-
-
     try {
 
         const response =
@@ -2194,11 +2465,16 @@ async function placeOrder() {
         if (result.success) {
 
             document
-                .getElementById("checkoutContent")
+                .getElementById(
+                    "checkoutContent"
+                )
                 .style.display = "none";
 
+
             document
-                .getElementById("successMessage")
+                .getElementById(
+                    "successMessage"
+                )
                 .classList.add("show");
 
 
@@ -2208,23 +2484,37 @@ async function placeOrder() {
 
 
             document
-                .getElementById("customerName")
+                .getElementById(
+                    "customerName"
+                )
                 .value = "";
 
-            document
-                .getElementById("customName")
-                .value = "";
 
             document
-                .getElementById("customSticker")
+                .getElementById(
+                    "customName"
+                )
                 .value = "";
 
+
             document
-                .getElementById("customStickerQty")
+                .getElementById(
+                    "customSticker"
+                )
+                .value = "";
+
+
+            document
+                .getElementById(
+                    "customStickerQty"
+                )
                 .value = "0";
 
+
             document
-                .getElementById("notes")
+                .getElementById(
+                    "notes"
+                )
                 .value = "";
 
         }
@@ -2255,7 +2545,7 @@ async function placeOrder() {
 
 
 /* =========================================================
-   INITIALIZE SHOP
+   START SHOP
 ========================================================= */
 
 renderPacks();
@@ -2265,19 +2555,6 @@ renderProducts();
 renderMusic();
 
 updateCart();
-
-
-/* =========================================================
-   UPDATE CHECKOUT WHEN NOTES CHANGE
-========================================================= */
-
-document
-    .getElementById("notes")
-    .addEventListener(
-        "input",
-        updateCheckoutSummary
-    );
-
 
 </script>
 
