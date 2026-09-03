@@ -1,0 +1,2285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>🎀 CBK'S SHOP 🎀</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Fredoka:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+
+<style>
+
+:root {
+    --pink: #ff82b2;
+    --hot-pink: #ff5f9e;
+    --light-pink: #fff0f6;
+    --yellow: #ffd95a;
+    --soft-yellow: #fff8cf;
+    --deep-pink: #b83d72;
+    --text: #5c3b4a;
+    --white: #fffdfd;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Baloo 2", cursive;
+    background:
+        radial-gradient(circle at 10% 10%, #fff6fa 0 8%, transparent 9%),
+        radial-gradient(circle at 90% 20%, #fff8cf 0 7%, transparent 8%),
+        var(--light-pink);
+    color: var(--text);
+}
+
+/* HEADER */
+
+header {
+    background: var(--white);
+    border-bottom: 4px solid var(--pink);
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: "Pacifico", cursive;
+    color: var(--hot-pink);
+    font-size: 27px;
+}
+
+.cart-button {
+    background: var(--yellow);
+    border: 3px solid var(--deep-pink);
+    border-radius: 30px;
+    padding: 10px 18px;
+    font-family: "Fredoka", sans-serif;
+    font-weight: 700;
+    color: var(--deep-pink);
+    cursor: pointer;
+    transition: .2s;
+}
+
+.cart-button:hover {
+    transform: scale(1.05);
+}
+
+/* NAV */
+
+nav {
+    background: #fff9fc;
+    padding: 12px 5%;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    border-bottom: 2px dashed var(--pink);
+}
+
+nav button {
+    border: 2px solid var(--pink);
+    background: white;
+    color: var(--deep-pink);
+    border-radius: 20px;
+    padding: 7px 14px;
+    font-family: "Fredoka", sans-serif;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+nav button:hover,
+nav button.active {
+    background: var(--pink);
+    color: white;
+}
+
+/* HERO */
+
+.hero {
+    text-align: center;
+    padding: 65px 20px;
+    background:
+        linear-gradient(135deg, #fffdfd, #fff1f7, #fffbe2);
+}
+
+.hero h1 {
+    font-family: "Pacifico", cursive;
+    color: var(--hot-pink);
+    font-size: clamp(40px, 8vw, 70px);
+    margin: 0 0 10px;
+}
+
+.hero p {
+    font-size: 20px;
+    max-width: 650px;
+    margin: auto;
+}
+
+.price-badge {
+    display: inline-block;
+    margin-top: 22px;
+    background: var(--yellow);
+    border: 3px solid var(--deep-pink);
+    border-radius: 30px;
+    padding: 10px 22px;
+    font-weight: 800;
+    font-family: "Fredoka", sans-serif;
+}
+
+/* GENERAL SECTIONS */
+
+section {
+    padding: 55px 6%;
+}
+
+.section-title {
+    text-align: center;
+    font-family: "Fredoka", sans-serif;
+    font-size: 35px;
+    color: var(--deep-pink);
+    margin-bottom: 8px;
+}
+
+.section-subtitle {
+    text-align: center;
+    margin: 0 auto 30px;
+    font-size: 18px;
+}
+
+/* GUIDE */
+
+.guide {
+    background: var(--soft-yellow);
+}
+
+.guide-grid {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 18px;
+}
+
+.guide-card {
+    background: white;
+    border: 3px solid var(--yellow);
+    border-radius: 22px;
+    padding: 22px;
+    text-align: center;
+}
+
+.guide-card span {
+    font-size: 35px;
+}
+
+.guide-card h3 {
+    margin: 8px 0;
+    color: var(--deep-pink);
+}
+
+/* PACKS */
+
+.packs-section {
+    background: #fff9fc;
+}
+
+.pack-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 20px;
+}
+
+.pack {
+    background: white;
+    border: 3px solid var(--pink);
+    border-radius: 25px;
+    padding: 22px 15px;
+    text-align: center;
+    box-shadow: 0 5px 0 #ffd3e3;
+    transition: .2s;
+}
+
+.pack:hover {
+    transform: translateY(-5px);
+}
+
+.pack-icon {
+    font-size: 48px;
+}
+
+.pack h3 {
+    margin: 10px 0 3px;
+    font-family: "Fredoka", sans-serif;
+    color: var(--deep-pink);
+}
+
+.pack-price {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--hot-pink);
+}
+
+.pack-info {
+    background: var(--soft-yellow);
+    border-radius: 15px;
+    padding: 6px 10px;
+    margin: 8px 0 13px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.pack button,
+.product button,
+.custom-button {
+    border: 0;
+    background: var(--hot-pink);
+    color: white;
+    border-radius: 18px;
+    padding: 9px 16px;
+    font-family: "Fredoka", sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.pack button:hover,
+.product button:hover,
+.custom-button:hover {
+    background: var(--deep-pink);
+}
+
+/* PRODUCTS */
+
+.products-section {
+    background: var(--light-pink);
+}
+
+.product-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 18px;
+}
+
+.product {
+    background: white;
+    border: 3px solid #ffc2d9;
+    border-radius: 22px;
+    padding: 18px;
+    text-align: center;
+    transition: .2s;
+}
+
+.product:hover {
+    transform: translateY(-4px);
+}
+
+.product-icon {
+    font-size: 45px;
+    margin-bottom: 8px;
+}
+
+.product h3 {
+    margin: 4px 0;
+    font-family: "Fredoka", sans-serif;
+}
+
+.product-category {
+    font-size: 13px;
+    color: #9c7082;
+}
+
+.product-price {
+    font-weight: 800;
+    color: var(--hot-pink);
+    font-size: 21px;
+    margin: 5px 0 10px;
+}
+
+/* KPOP / GPOP */
+
+.music-section {
+    background:
+        linear-gradient(135deg, #fff0f7, #fffbe0);
+}
+
+.music-grid {
+    max-width: 900px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 22px;
+}
+
+.music-card {
+    background: white;
+    border: 3px solid var(--pink);
+    border-radius: 25px;
+    min-height: 150px;
+    padding: 30px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 5px 0 #ffd3e3;
+    transition: .2s;
+}
+
+.music-card:hover {
+    transform: translateY(-5px) rotate(-1deg);
+}
+
+.music-name {
+    font-family: "Fredoka", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--deep-pink);
+    letter-spacing: 1px;
+}
+
+.music-type {
+    margin-top: 5px;
+    color: #a66b83;
+    font-size: 14px;
+}
+
+.music-price {
+    margin-top: 10px;
+    font-size: 19px;
+    color: var(--hot-pink);
+    font-weight: 800;
+}
+
+.music-card button {
+    margin-top: 10px;
+    border: 0;
+    background: var(--yellow);
+    color: var(--deep-pink);
+    border-radius: 18px;
+    padding: 8px 15px;
+    font-family: "Fredoka", sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* CART */
+
+.cart-panel {
+    position: fixed;
+    right: -420px;
+    top: 0;
+    width: min(400px, 92vw);
+    height: 100vh;
+    background: white;
+    z-index: 2000;
+    box-shadow: -8px 0 25px rgba(92,59,74,.15);
+    padding: 25px;
+    transition: .3s;
+    overflow-y: auto;
+}
+
+.cart-panel.open {
+    right: 0;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-header h2 {
+    color: var(--deep-pink);
+    font-family: "Fredoka", sans-serif;
+}
+
+.close-cart {
+    background: #ffe1ec;
+    border: 0;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.cart-item {
+    border-bottom: 2px dashed #ffc8da;
+    padding: 13px 0;
+}
+
+.cart-item-name {
+    font-weight: 700;
+}
+
+.cart-item-price {
+    color: var(--hot-pink);
+    font-weight: 700;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 7px;
+}
+
+.quantity-controls button {
+    border: 0;
+    background: var(--pink);
+    color: white;
+    border-radius: 50%;
+    width: 27px;
+    height: 27px;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.cart-total {
+    margin-top: 20px;
+    border-top: 3px solid var(--pink);
+    padding-top: 15px;
+    font-size: 23px;
+    font-weight: 800;
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkout-button {
+    width: 100%;
+    margin-top: 15px;
+    border: 0;
+    border-radius: 22px;
+    background: var(--hot-pink);
+    color: white;
+    padding: 13px;
+    font-family: "Fredoka", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* OVERLAY */
+
+.overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(92,59,74,.35);
+    z-index: 1500;
+}
+
+.overlay.show {
+    display: block;
+}
+
+/* CHECKOUT MODAL */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(92,59,74,.35);
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-box {
+    background: white;
+    width: min(550px, 95vw);
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 28px;
+    border: 4px solid var(--pink);
+    padding: 25px;
+}
+
+.modal-box h2 {
+    text-align: center;
+    font-family: "Fredoka", sans-serif;
+    color: var(--deep-pink);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    border: 2px solid #ffc0d7;
+    border-radius: 15px;
+    padding: 11px;
+    font-family: "Baloo 2", cursive;
+    font-size: 16px;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--hot-pink);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.summary {
+    background: var(--light-pink);
+    border-radius: 18px;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+.summary-line {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 5px 0;
+}
+
+.summary-pack {
+    color: var(--deep-pink);
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.modal-buttons button {
+    flex: 1;
+    padding: 12px;
+    border-radius: 20px;
+    border: 0;
+    font-family: "Fredoka", sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.cancel-button {
+    background: #eee;
+    color: #555;
+}
+
+.place-order-button {
+    background: var(--hot-pink);
+    color: white;
+}
+
+.success-message {
+    display: none;
+    text-align: center;
+    padding: 30px 10px;
+}
+
+.success-message.show {
+    display: block;
+}
+
+.success-message .big {
+    font-size: 60px;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    background: var(--deep-pink);
+    color: white;
+    padding: 30px 20px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 14px 4%;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .hero {
+        padding: 45px 15px;
+    }
+
+    section {
+        padding: 40px 4%;
+    }
+
+    .section-title {
+        font-size: 29px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="logo">
+        🎀 CBK'S SHOP 🎀
+    </div>
+
+    <button class="cart-button" onclick="toggleCart()">
+        🛒 Cart (<span id="cartCount">0</span>)
+    </button>
+
+</header>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+    <button class="active" onclick="filterProducts('All', this)">
+        All
+    </button>
+
+    <button onclick="filterProducts('Cute & Food', this)">
+        🍓 Cute & Food
+    </button>
+
+    <button onclick="filterProducts('Characters', this)">
+        🎀 Characters
+    </button>
+
+    <button onclick="filterProducts('Names', this)">
+        ✏️ Custom
+    </button>
+
+    <button onclick="filterProducts('Shapes', this)">
+        ⭐ Shapes
+    </button>
+
+    <button onclick="filterProducts('Designs', this)">
+        🎨 Designs
+    </button>
+
+    <button onclick="filterProducts('Sanrio', this)">
+        🌸 Sanrio
+    </button>
+
+    <button onclick="filterProducts('Animals', this)">
+        🐰 Animals
+    </button>
+
+    <button onclick="scrollToMusic()">
+        🎤 K-Pop / G-Pop
+    </button>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <h1>CBK'S SHOP 🎀</h1>
+
+    <p>
+        Cute little stickers for your notebooks, phones,
+        laptops, journals and everything else! 💗
+    </p>
+
+    <div class="price-badge">
+        ✨ Individual Stickers ₱2 • Sticker Packs ₱20 ✨
+    </div>
+
+</section>
+
+
+<!-- QUICK GUIDE -->
+
+<section class="guide">
+
+    <h2 class="section-title">
+        💗 Quick Guide 💗
+    </h2>
+
+    <p class="section-subtitle">
+        Everything you need to know before shopping!
+    </p>
+
+    <div class="guide-grid">
+
+        <div class="guide-card">
+            <span>🏷️</span>
+            <h3>Individual Stickers</h3>
+            <p>
+                Pick your favorites individually!
+                Each sticker is only <b>₱2</b>.
+            </p>
+        </div>
+
+        <div class="guide-card">
+            <span>🎀</span>
+            <h3>Sticker Packs</h3>
+            <p>
+                Every sticker pack contains
+                <b>11 stickers</b> and costs only <b>₱20</b>!
+            </p>
+        </div>
+
+        <div class="guide-card">
+            <span>🛒</span>
+            <h3>Add to Cart</h3>
+            <p>
+                Mix individual stickers and packs
+                in the same cart.
+            </p>
+        </div>
+
+        <div class="guide-card">
+            <span>💌</span>
+            <h3>Checkout</h3>
+            <p>
+                Fill out your details and send your
+                order straight to the shop email.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PACKS -->
+
+<section class="packs-section" id="packs">
+
+    <h2 class="section-title">
+        🎀 STICKER PACKS 🎀
+    </h2>
+
+    <p class="section-subtitle">
+        Pick a color or let the shop surprise you! 💗
+        <br>
+        <b>Every pack contains 11 stickers • ₱20 per pack</b>
+    </p>
+
+    <div class="pack-grid" id="packGrid"></div>
+
+</section>
+
+
+<!-- INDIVIDUAL STICKERS -->
+
+<section class="products-section">
+
+    <h2 class="section-title">
+        ✨ INDIVIDUAL STICKERS ✨
+    </h2>
+
+    <p class="section-subtitle">
+        Choose individual stickers for just <b>₱2 each</b>!
+    </p>
+
+    <div class="product-grid" id="productGrid"></div>
+
+</section>
+
+
+<!-- KPOP / GPOP -->
+
+<section class="music-section" id="music">
+
+    <h2 class="section-title">
+        🎤 K-POP / G-POP 🎤
+    </h2>
+
+    <p class="section-subtitle">
+        Your favorite groups — as cute text stickers! 💗
+        <br>
+        <b>No pictures, just the group names.</b>
+    </p>
+
+    <div class="music-grid" id="musicGrid"></div>
+
+</section>
+
+
+<!-- CART -->
+
+<div class="overlay" id="overlay" onclick="closeCart()"></div>
+
+<aside class="cart-panel" id="cartPanel">
+
+    <div class="cart-header">
+
+        <h2>
+            🛒 Your Cart
+        </h2>
+
+        <button class="close-cart" onclick="closeCart()">
+            ✕
+        </button>
+
+    </div>
+
+    <div id="cartItems">
+
+        <p style="text-align:center;">
+            Your cart is empty! 🎀
+        </p>
+
+    </div>
+
+    <div class="cart-total">
+
+        <span>Total</span>
+
+        <span>
+            ₱<span id="cartTotal">0</span>
+        </span>
+
+    </div>
+
+    <button class="checkout-button" onclick="checkout()">
+        💌 Checkout
+    </button>
+
+</aside>
+
+
+<!-- CHECKOUT MODAL -->
+
+<div class="modal" id="checkoutModal">
+
+    <div class="modal-box">
+
+        <div id="checkoutContent">
+
+            <h2>
+                💌 Checkout 💌
+            </h2>
+
+            <div class="form-group">
+
+                <label for="customerName">
+                    Your Name *
+                </label>
+
+                <input
+                    type="text"
+                    id="customerName"
+                    placeholder="Enter your name"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="customName">
+                    Name for Custom Sticker
+                </label>
+
+                <input
+                    type="text"
+                    id="customName"
+                    placeholder="Optional"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="customSticker">
+                    Custom Sticker Request
+                </label>
+
+                <input
+                    type="text"
+                    id="customSticker"
+                    placeholder="Optional — tell us what you want!"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="customStickerQty">
+                    Custom Sticker Quantity
+                </label>
+
+                <input
+                    type="number"
+                    id="customStickerQty"
+                    min="0"
+                    value="0"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="notes">
+                    Extra Requests / Notes
+                </label>
+
+                <textarea
+                    id="notes"
+                    placeholder="Any extra requests? 💗"
+                ></textarea>
+
+            </div>
+
+
+            <div class="summary">
+
+                <h3 style="margin-top:0;">
+                    🧾 Order Summary
+                </h3>
+
+                <div id="orderSummary">
+                    Your cart is empty.
+                </div>
+
+            </div>
+
+
+            <div class="modal-buttons">
+
+                <button
+                    class="cancel-button"
+                    onclick="closeCheckout()"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    class="place-order-button"
+                    onclick="placeOrder()"
+                >
+                    💌 Place Order
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="success-message" id="successMessage">
+
+            <div class="big">
+                🎀
+            </div>
+
+            <h2>
+                Order Sent!
+            </h2>
+
+            <p>
+                Thank you for ordering from CBK'S SHOP! 💗
+            </p>
+
+            <p>
+                Your order has been sent successfully.
+            </p>
+
+            <button
+                class="checkout-button"
+                onclick="closeCheckout()"
+            >
+                Done ✨
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        🎀 CBK'S SHOP 🎀
+    </p>
+
+    <p>
+        Cute stickers made with love 💗
+    </p>
+
+    <p>
+        Individual stickers ₱2 • Packs ₱20 • 11 stickers per pack
+    </p>
+
+</footer>
+
+
+<script>
+
+/* =========================================================
+   PRODUCT DATA
+========================================================= */
+
+const products = [
+
+    ["Cute Popsicle", "🍧", "Cute & Food"],
+    ["Cute Ice Cream", "🍦", "Cute & Food"],
+    ["Strawberry", "🍓", "Cute & Food"],
+    ["Cupcake", "🧁", "Cute & Food"],
+    ["Boba", "🧋", "Cute & Food"],
+    ["Donut", "🍩", "Cute & Food"],
+    ["Cookie", "🍪", "Cute & Food"],
+    ["Candy", "🍬", "Cute & Food"],
+    ["Watermelon", "🍉", "Cute & Food"],
+    ["Cherry", "🍒", "Cute & Food"],
+    ["Cake", "🍰", "Cute & Food"],
+    ["Pizza", "🍕", "Cute & Food"],
+    ["Lollipop", "🍭", "Cute & Food"],
+    ["Macaron", "🍬", "Cute & Food"],
+    ["Pancakes", "🥞", "Cute & Food"],
+
+    ["Hello Kitty", "🎀", "Characters"],
+    ["My Melody", "🌸", "Characters"],
+    ["Kuromi", "🖤", "Characters"],
+    ["Cinnamoroll", "☁️", "Characters"],
+    ["Pompompurin", "🍮", "Characters"],
+    ["Pochacco", "🐶", "Characters"],
+    ["Keroppi", "🐸", "Characters"],
+    ["Little Twin Stars", "⭐", "Characters"],
+    ["Badtz-Maru", "🐧", "Characters"],
+
+    ["Nickname Sticker", "NAME", "Names"],
+    ["Full Name Sticker", "NAME", "Names"],
+    ["Custom Word Sticker", "WORD", "Names"],
+    ["Custom Initial", "A", "Names"],
+    ["Favorite Quote", "💬", "Names"],
+    ["Inside Joke Sticker", "😂", "Names"],
+
+    ["Sparkly Star", "⭐", "Shapes"],
+    ["Pink Heart", "💗", "Shapes"],
+    ["Cute Cloud", "☁️", "Shapes"],
+    ["Butterfly", "🦋", "Shapes"],
+    ["Bow", "🎀", "Shapes"],
+    ["Flower", "🌷", "Shapes"],
+    ["Sparkles", "✨", "Shapes"],
+    ["Y2K Heart", "💿", "Shapes"],
+    ["Moon", "🌙", "Shapes"],
+    ["Rainbow", "🌈", "Shapes"],
+    ["Lightning", "⚡", "Shapes"],
+    ["Star Cluster", "🌟", "Shapes"],
+
+    ["Cute Cat", "🐱", "Animals"],
+    ["Bunny", "🐰", "Animals"],
+    ["Frog", "🐸", "Animals"],
+    ["Bear", "🧸", "Animals"],
+    ["Duck", "🐥", "Animals"],
+    ["Panda", "🐼", "Animals"],
+    ["Penguin", "🐧", "Animals"],
+    ["Hamster", "🐹", "Animals"],
+    ["Dog", "🐶", "Animals"],
+    ["Baby Chick", "🐣", "Animals"],
+    ["Fox", "🦊", "Animals"],
+    ["Koala", "🐨", "Animals"],
+    ["Pig", "🐷", "Animals"],
+    ["Bee", "🐝", "Animals"],
+    ["Red Panda", "🦊", "Animals"],
+    ["Deer", "🦌", "Animals"],
+    ["Otter", "🦦", "Animals"],
+    ["Seal", "🦭", "Animals"],
+    ["Capybara", "🦫", "Animals"],
+    ["Butterfly Moth", "🦋", "Animals"],
+
+    ["Swirl", "Swirl", "Designs"],
+    ["Dreamy Doodle", "Doodle", "Designs"],
+    ["Checker Pop", "Checker", "Designs"],
+    ["Starburst", "Starburst", "Designs"],
+    ["Wavy Lines", "Wavy", "Designs"],
+    ["Groovy Loop", "Groovy", "Designs"],
+    ["Bubble Pop", "Bubble", "Designs"],
+    ["Cherry Bloom", "Cherry", "Designs"],
+    ["Cloudy Scribble", "Cloudy", "Designs"],
+    ["Y2K Shine", "Y2K", "Designs"],
+
+    ["Hello Kitty", "Hello Kitty", "Sanrio"],
+    ["My Melody", "My Melody", "Sanrio"],
+    ["Kuromi", "Kuromi", "Sanrio"],
+    ["Cinnamoroll", "Cinnamoroll", "Sanrio"],
+    ["Pompompurin", "Pompompurin", "Sanrio"],
+    ["Pochacco", "Pochacco", "Sanrio"],
+    ["Keroppi", "Keroppi", "Sanrio"],
+    ["Badtz-Maru", "Badtz-Maru", "Sanrio"],
+    ["Little Twin Stars", "Little Twin Stars", "Sanrio"],
+    ["Chococat", "Chococat", "Sanrio"],
+    ["Tuxedosam", "Tuxedosam", "Sanrio"],
+    ["Gudetama", "Gudetama", "Sanrio"],
+    ["Hangyodon", "Hangyodon", "Sanrio"],
+    ["Kogimyun", "Kogimyun", "Sanrio"],
+    ["Usahana", "Usahana", "Sanrio"],
+    ["Cogimyun", "Cogimyun", "Sanrio"]
+
+];
+
+
+/* =========================================================
+   STICKER PACK DATA
+========================================================= */
+
+const packs = [
+
+    ["Green Pack", "💚"],
+    ["Pink Pack", "💗"],
+    ["Blue Pack", "💙"],
+    ["Purple Pack", "💜"],
+    ["Yellow Pack", "💛"],
+    ["Orange Pack", "🧡"],
+    ["Red Pack", "❤️"],
+    ["Black Pack", "🖤"],
+    ["White Pack", "🤍"],
+    ["Brown Pack", "🤎"],
+    ["Light Blue Pack", "🩵"],
+    ["Light Pink Pack", "🩷"],
+    ["Gray Pack", "🩶"],
+    ["Rainbow Pack", "🌈"],
+    ["Randomized Pack", "🎲"]
+
+];
+
+
+/* =========================================================
+   KPOP / GPOP DATA
+========================================================= */
+
+const musicGroups = [
+
+    ["aespa", "K-Pop"],
+    ["ILLIT", "K-Pop"],
+    ["KATSEYE", "G-Pop"],
+    ["IVE", "K-Pop"],
+    ["TWICE", "K-Pop"]
+
+];
+
+
+/* =========================================================
+   CART
+========================================================= */
+
+let cart = {};
+
+
+/* =========================================================
+   RENDER PACKS
+========================================================= */
+
+function renderPacks() {
+
+    const container = document.getElementById("packGrid");
+
+    container.innerHTML = "";
+
+    packs.forEach((pack, index) => {
+
+        container.innerHTML += `
+
+            <div class="pack">
+
+                <div class="pack-icon">
+                    ${pack[1]}
+                </div>
+
+                <h3>
+                    ${pack[0]}
+                </h3>
+
+                <div class="pack-price">
+                    ₱20
+                </div>
+
+                <div class="pack-info">
+                    🎀 11 stickers per pack
+                </div>
+
+                <button onclick="addPackToCart(${index}, this)">
+                    + Add Pack
+                </button>
+
+            </div>
+
+        `;
+
+    });
+
+}
+
+
+/* =========================================================
+   RENDER PRODUCTS
+========================================================= */
+
+function renderProducts(category = "All") {
+
+    const container = document.getElementById("productGrid");
+
+    container.innerHTML = "";
+
+    products.forEach((product, index) => {
+
+        if (category !== "All" && product[2] !== category) {
+            return;
+        }
+
+        container.innerHTML += `
+
+            <div class="product">
+
+                <div class="product-icon">
+                    ${product[1]}
+                </div>
+
+                <h3>
+                    ${product[0]}
+                </h3>
+
+                <div class="product-category">
+                    ${product[2]}
+                </div>
+
+                <div class="product-price">
+                    ₱2
+                </div>
+
+                <button onclick="addToCart(${index}, this)">
+                    + Add
+                </button>
+
+            </div>
+
+        `;
+
+    });
+
+}
+
+
+/* =========================================================
+   RENDER MUSIC
+========================================================= */
+
+function renderMusic() {
+
+    const container = document.getElementById("musicGrid");
+
+    container.innerHTML = "";
+
+    musicGroups.forEach((group, index) => {
+
+        container.innerHTML += `
+
+            <div class="music-card">
+
+                <div class="music-name">
+                    ${group[0]}
+                </div>
+
+                <div class="music-type">
+                    ${group[1]} • Text Sticker
+                </div>
+
+                <div class="music-price">
+                    ₱2
+                </div>
+
+                <button onclick="addMusicToCart(${index}, this)">
+                    + Add Sticker
+                </button>
+
+            </div>
+
+        `;
+
+    });
+
+}
+
+
+/* =========================================================
+   ADD INDIVIDUAL STICKER
+========================================================= */
+
+function addToCart(index, button) {
+
+    const key = "sticker-" + index;
+
+    if (!cart[key]) {
+        cart[key] = 0;
+    }
+
+    cart[key]++;
+
+    updateCart();
+
+    const oldText = button.innerText;
+
+    button.innerText = "✓ Added!";
+
+    setTimeout(() => {
+
+        button.innerText = oldText;
+
+    }, 700);
+
+}
+
+
+/* =========================================================
+   ADD PACK
+========================================================= */
+
+function addPackToCart(index, button) {
+
+    const key = "pack-" + index;
+
+    if (!cart[key]) {
+        cart[key] = 0;
+    }
+
+    cart[key]++;
+
+    updateCart();
+
+    const oldText = button.innerText;
+
+    button.innerText = "✓ Added!";
+
+    setTimeout(() => {
+
+        button.innerText = oldText;
+
+    }, 700);
+
+}
+
+
+/* =========================================================
+   ADD KPOP / GPOP STICKER
+========================================================= */
+
+function addMusicToCart(index, button) {
+
+    const key = "music-" + index;
+
+    if (!cart[key]) {
+        cart[key] = 0;
+    }
+
+    cart[key]++;
+
+    updateCart();
+
+    const oldText = button.innerText;
+
+    button.innerText = "✓ Added!";
+
+    setTimeout(() => {
+
+        button.innerText = oldText;
+
+    }, 700);
+
+}
+
+
+/* =========================================================
+   CHANGE QUANTITY
+========================================================= */
+
+function changeQuantity(key, amount) {
+
+    if (!cart[key]) {
+        return;
+    }
+
+    cart[key] += amount;
+
+    if (cart[key] <= 0) {
+        delete cart[key];
+    }
+
+    updateCart();
+
+}
+
+
+/* =========================================================
+   UPDATE CART
+========================================================= */
+
+function updateCart() {
+
+    const container = document.getElementById("cartItems");
+
+    const countElement = document.getElementById("cartCount");
+
+    const totalElement = document.getElementById("cartTotal");
+
+    container.innerHTML = "";
+
+    let total = 0;
+
+    let itemCount = 0;
+
+    const keys = Object.keys(cart);
+
+    if (keys.length === 0) {
+
+        container.innerHTML = `
+            <p style="text-align:center;">
+                Your cart is empty! 🎀
+            </p>
+        `;
+
+        countElement.innerText = "0";
+
+        totalElement.innerText = "0";
+
+        return;
+
+    }
+
+
+    keys.forEach(key => {
+
+        const quantity = cart[key];
+
+        itemCount += quantity;
+
+
+        /* INDIVIDUAL STICKER */
+
+        if (key.startsWith("sticker-")) {
+
+            const index = Number(
+                key.replace("sticker-", "")
+            );
+
+            const product = products[index];
+
+            const price = quantity * 2;
+
+            total += price;
+
+            container.innerHTML += `
+
+                <div class="cart-item">
+
+                    <div class="cart-item-name">
+                        ${product[1]} ${product[0]}
+                    </div>
+
+                    <div class="cart-item-price">
+                        ₱${price} • ₱2 each
+                    </div>
+
+                    <div class="quantity-controls">
+
+                        <button
+                            onclick="changeQuantity('${key}', -1)"
+                        >
+                            −
+                        </button>
+
+                        <span>
+                            ${quantity}
+                        </span>
+
+                        <button
+                            onclick="changeQuantity('${key}', 1)"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            `;
+
+        }
+
+
+        /* PACK */
+
+        else if (key.startsWith("pack-")) {
+
+            const index = Number(
+                key.replace("pack-", "")
+            );
+
+            const pack = packs[index];
+
+            const price = quantity * 20;
+
+            total += price;
+
+            container.innerHTML += `
+
+                <div class="cart-item">
+
+                    <div class="cart-item-name">
+                        ${pack[1]} ${pack[0]}
+                    </div>
+
+                    <div style="font-size:13px;">
+                        🎀 11 stickers per pack
+                    </div>
+
+                    <div class="cart-item-price">
+                        ₱${price} • ₱20 each
+                    </div>
+
+                    <div class="quantity-controls">
+
+                        <button
+                            onclick="changeQuantity('${key}', -1)"
+                        >
+                            −
+                        </button>
+
+                        <span>
+                            ${quantity}
+                        </span>
+
+                        <button
+                            onclick="changeQuantity('${key}', 1)"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            `;
+
+        }
+
+
+        /* KPOP / GPOP */
+
+        else if (key.startsWith("music-")) {
+
+            const index = Number(
+                key.replace("music-", "")
+            );
+
+            const group = musicGroups[index];
+
+            const price = quantity * 2;
+
+            total += price;
+
+            container.innerHTML += `
+
+                <div class="cart-item">
+
+                    <div class="cart-item-name">
+                        🎤 ${group[0]} Text Sticker
+                    </div>
+
+                    <div class="cart-item-price">
+                        ₱${price} • ₱2 each
+                    </div>
+
+                    <div class="quantity-controls">
+
+                        <button
+                            onclick="changeQuantity('${key}', -1)"
+                        >
+                            −
+                        </button>
+
+                        <span>
+                            ${quantity}
+                        </span>
+
+                        <button
+                            onclick="changeQuantity('${key}', 1)"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            `;
+
+        }
+
+    });
+
+
+    countElement.innerText = itemCount;
+
+    totalElement.innerText = total;
+
+}
+
+
+/* =========================================================
+   CART OPEN / CLOSE
+========================================================= */
+
+function toggleCart() {
+
+    document
+        .getElementById("cartPanel")
+        .classList.toggle("open");
+
+    document
+        .getElementById("overlay")
+        .classList.toggle("show");
+
+}
+
+
+function closeCart() {
+
+    document
+        .getElementById("cartPanel")
+        .classList.remove("open");
+
+    document
+        .getElementById("overlay")
+        .classList.remove("show");
+
+}
+
+
+/* =========================================================
+   PRODUCT FILTER
+========================================================= */
+
+function filterProducts(category, button) {
+
+    document
+        .querySelectorAll("nav button")
+        .forEach(btn => btn.classList.remove("active"));
+
+    button.classList.add("active");
+
+    renderProducts(category);
+
+}
+
+
+/* =========================================================
+   SCROLL TO KPOP
+========================================================= */
+
+function scrollToMusic() {
+
+    document
+        .getElementById("music")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+
+}
+
+
+/* =========================================================
+   CHECKOUT
+========================================================= */
+
+function checkout() {
+
+    if (Object.keys(cart).length === 0) {
+
+        alert("Your cart is empty! 🎀");
+
+        return;
+
+    }
+
+    closeCart();
+
+    updateCheckoutSummary();
+
+    document
+        .getElementById("checkoutModal")
+        .classList.add("show");
+
+}
+
+
+/* =========================================================
+   CHECKOUT SUMMARY
+========================================================= */
+
+function updateCheckoutSummary() {
+
+    const summaryElement =
+        document.getElementById("orderSummary");
+
+    let summary = "";
+
+    let total = 0;
+
+
+    Object.keys(cart).forEach(key => {
+
+        const quantity = cart[key];
+
+
+        /* STICKER */
+
+        if (key.startsWith("sticker-")) {
+
+            const index = Number(
+                key.replace("sticker-", "")
+            );
+
+            const product = products[index];
+
+            const price = quantity * 2;
+
+            total += price;
+
+            summary += `
+
+                <div class="summary-line">
+
+                    <span>
+                        ${product[1]} ${product[0]} × ${quantity}
+                    </span>
+
+                    <b>
+                        ₱${price}
+                    </b>
+
+                </div>
+
+            `;
+
+        }
+
+
+        /* PACK */
+
+        else if (key.startsWith("pack-")) {
+
+            const index = Number(
+                key.replace("pack-", "")
+            );
+
+            const pack = packs[index];
+
+            const price = quantity * 20;
+
+            total += price;
+
+            summary += `
+
+                <div class="summary-line summary-pack">
+
+                    <span>
+                        ${pack[1]} ${pack[0]} × ${quantity}
+                        <small>(11 stickers each)</small>
+                    </span>
+
+                    <b>
+                        ₱${price}
+                    </b>
+
+                </div>
+
+            `;
+
+        }
+
+
+        /* MUSIC */
+
+        else if (key.startsWith("music-")) {
+
+            const index = Number(
+                key.replace("music-", "")
+            );
+
+            const group = musicGroups[index];
+
+            const price = quantity * 2;
+
+            total += price;
+
+            summary += `
+
+                <div class="summary-line">
+
+                    <span>
+                        🎤 ${group[0]} Text Sticker × ${quantity}
+                    </span>
+
+                    <b>
+                        ₱${price}
+                    </b>
+
+                </div>
+
+            `;
+
+        }
+
+    });
+
+
+    summary += `
+
+        <hr>
+
+        <div class="summary-line">
+
+            <strong>
+                Total
+            </strong>
+
+            <strong>
+                ₱${total}
+            </strong>
+
+        </div>
+
+    `;
+
+
+    summaryElement.innerHTML = summary;
+
+}
+
+
+/* =========================================================
+   CLOSE CHECKOUT
+========================================================= */
+
+function closeCheckout() {
+
+    document
+        .getElementById("checkoutModal")
+        .classList.remove("show");
+
+    document
+        .getElementById("successMessage")
+        .classList.remove("show");
+
+    document
+        .getElementById("checkoutContent")
+        .style.display = "block";
+
+}
+
+
+/* =========================================================
+   PLACE ORDER
+========================================================= */
+
+async function placeOrder() {
+
+    const name =
+        document
+            .getElementById("customerName")
+            .value
+            .trim();
+
+
+    const customName =
+        document
+            .getElementById("customName")
+            .value
+            .trim();
+
+
+    const customSticker =
+        document
+            .getElementById("customSticker")
+            .value
+            .trim();
+
+
+    const customStickerQty =
+        Number(
+            document
+                .getElementById("customStickerQty")
+                .value
+        ) || 0;
+
+
+    const notes =
+        document
+            .getElementById("notes")
+            .value
+            .trim();
+
+
+    if (!name) {
+
+        alert("Please enter your name! 💗");
+
+        return;
+
+    }
+
+
+    if (customStickerQty < 0) {
+
+        alert("Please enter a valid custom sticker quantity.");
+
+        return;
+
+    }
+
+
+    let orderLines = [];
+
+    let total = 0;
+
+
+    /* CART ITEMS */
+
+    Object.keys(cart).forEach(key => {
+
+        const quantity = cart[key];
+
+
+        /* INDIVIDUAL */
+
+        if (key.startsWith("sticker-")) {
+
+            const index = Number(
+                key.replace("sticker-", "")
+            );
+
+            const product = products[index];
+
+            const price = quantity * 2;
+
+            total += price;
+
+            orderLines.push(
+                `${product[0]} × ${quantity} = ₱${price}`
+            );
+
+        }
+
+
+        /* PACK */
+
+        else if (key.startsWith("pack-")) {
+
+            const index = Number(
+                key.replace("pack-", "")
+            );
+
+            const pack = packs[index];
+
+            const price = quantity * 20;
+
+            total += price;
+
+            orderLines.push(
+                `PACK: ${pack[0]} × ${quantity} = ₱${price} (${quantity * 11} stickers total)`
+            );
+
+        }
+
+
+        /* MUSIC */
+
+        else if (key.startsWith("music-")) {
+
+            const index = Number(
+                key.replace("music-", "")
+            );
+
+            const group = musicGroups[index];
+
+            const price = quantity * 2;
+
+            total += price;
+
+            orderLines.push(
+                `${group[0]} Text Sticker × ${quantity} = ₱${price}`
+            );
+
+        }
+
+    });
+
+
+    /* CUSTOM STICKER */
+
+    if (customSticker && customStickerQty > 0) {
+
+        const customPrice =
+            customStickerQty * 2;
+
+        total += customPrice;
+
+        orderLines.push(
+            `Custom Sticker: ${customSticker} × ${customStickerQty} = ₱${customPrice}`
+        );
+
+    }
+
+
+    /* CUSTOM NAME */
+
+    if (customName) {
+
+        orderLines.push(
+            `Custom Name: ${customName}`
+        );
+
+    }
+
+
+    /* EXTRA REQUEST */
+
+    if (notes) {
+
+        total += 2;
+
+        orderLines.push(
+            `Extra Request Fee = ₱2`
+        );
+
+    }
+
+
+    const orderText =
+        orderLines.join("\n");
+
+
+    const formData =
+        new FormData();
+
+
+    /* YOUR WEB3FORMS ACCESS KEY */
+
+    formData.append(
+        "access_key",
+        "8158903c-665d-47ce-8474-4f0f9c78ea63"
+    );
+
+
+    formData.append(
+        "subject",
+        `🛒 New Sticker Order from ${name}`
+    );
+
+
+    formData.append(
+        "from_name",
+        "CBK'S SHOP"
+    );
+
+
+    formData.append(
+        "name",
+        name
+    );
+
+
+    formData.append(
+        "custom_name",
+        customName || "None"
+    );
+
+
+    formData.append(
+        "custom_sticker",
+        customSticker || "None"
+    );
+
+
+    formData.append(
+        "custom_sticker_quantity",
+        customStickerQty
+    );
+
+
+    formData.append(
+        "order",
+        orderText
+    );
+
+
+    formData.append(
+        "extra_requests",
+        notes || "None"
+    );
+
+
+    formData.append(
+        "total",
+        `₱${total}`
+    );
+
+
+    formData.append(
+        "replyto",
+        "noreply@cbkshop.com"
+    );
+
+
+    try {
+
+        const response =
+            await fetch(
+                "https://api.web3forms.com/submit",
+                {
+                    method: "POST",
+                    body: formData
+                }
+            );
+
+
+        const result =
+            await response.json();
+
+
+        if (result.success) {
+
+            document
+                .getElementById("checkoutContent")
+                .style.display = "none";
+
+            document
+                .getElementById("successMessage")
+                .classList.add("show");
+
+
+            cart = {};
+
+            updateCart();
+
+
+            document
+                .getElementById("customerName")
+                .value = "";
+
+            document
+                .getElementById("customName")
+                .value = "";
+
+            document
+                .getElementById("customSticker")
+                .value = "";
+
+            document
+                .getElementById("customStickerQty")
+                .value = "0";
+
+            document
+                .getElementById("notes")
+                .value = "";
+
+        }
+
+        else {
+
+            alert(
+                "Something went wrong sending the order. Please try again! 💔"
+            );
+
+            console.error(result);
+
+        }
+
+    }
+
+    catch (error) {
+
+        console.error(error);
+
+        alert(
+            "The order couldn't be sent right now. Please check your internet connection and try again! 💗"
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   INITIALIZE SHOP
+========================================================= */
+
+renderPacks();
+
+renderProducts();
+
+renderMusic();
+
+updateCart();
+
+
+/* =========================================================
+   UPDATE CHECKOUT WHEN NOTES CHANGE
+========================================================= */
+
+document
+    .getElementById("notes")
+    .addEventListener(
+        "input",
+        updateCheckoutSummary
+    );
+
+
+</script>
+
+</body>
+</html>
